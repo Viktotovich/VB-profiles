@@ -1,0 +1,63 @@
+---
+//SSG >> SSR convertor
+//export const prerender = false;
+
+//non-negotiable
+import "../../styles/global.css"
+/*import LegacyLayout from "src/layouts/LegacyLayout.astro"
+
+//Header and Footer
+import PHeader from "#components/Admin/Partials/Create/PHeader.astro"
+import Footer from "#components/Anon/Footer.astro"
+import apiURL from "provider";
+
+//React-ive profile
+import ProfileParts from "#components/Admin/Sections/Profile/ProfileParts"
+
+//Types
+import type { PublicProfileType } from "#components/Admin/Partials/Dashboard/types/profile_type";
+
+//request.params('username')
+const {username} = Astro.params
+
+//TODO: v2.0.8 >> The public profiles
+//Fetch the profileInfo and pass it to ProfileParts prop
+let profileInfo: PublicProfileType["profileData"] | null = null
+let editable: boolean = false
+
+try {
+    const res = await fetch(apiURL + "/profile/" + username)
+    if (!res.ok) console.log(res) //not found TODO
+
+    const json = (await res.json()) as PublicProfileType
+    profileInfo = json.profileData 
+    editable = json.editable ?? false
+} catch (err) {
+    console.error(err)
+}
+
+//CANNOT WORK >> HAS TO BE EXPORTED INTO ITS OWN WORKER
+
+// Fetch user public profile
+//TODO: catch-up to v2.0.9 >> because we need to add the calendly links
+//TODO: ProfileParts >> Add the input forms for calendly url and name
+//TODO: Refresh migrations
+//TODO: v2.1.0 >> Refactor to use HTTP cookies vs localStorage
+---
+<LegacyLayout title={username + "'s Profile"}>
+    <PHeader />
+        <main class="bg-gray-100 flex items-center justify-center">
+            {
+                profileInfo ? (
+                    <ProfileParts profileInfo={profileInfo} editable={editable} client:load/>
+                ) : (
+                    <div class="text-center py-20">
+                        <h1 class="text-3xl font-bold">User "{username}" not found</h1>
+                        <p class="text-gray-500 mt-2">This profile may not exist or is private.</p>
+                    </div>
+                )
+            }
+        </main>
+    <Footer />
+</LegacyLayout>
+*/
