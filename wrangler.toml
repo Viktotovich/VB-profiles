@@ -3,6 +3,12 @@ compatibility_date = "2025-05-20"
 account_id = "508960d89e3e2fc3a887335d5c69e88f"
 main = "./dist/_worker.js"
 
+zone_id = "1a6d5012d3743e1264ca2a9363a0cf3d"
+
+routes = [
+  "https://www.vandbruno.net/profiles/*"
+]
+
 [build]
 command = "npm run build"
 
