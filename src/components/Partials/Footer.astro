@@ -1,0 +1,88 @@
+---
+//For the mobile footer
+import CopyrightSVG from "../svg/CopyrightSVG";
+import { InstagramSVG, LinkedinSVG, MetaSVG } from "../svg/SocialsSVG";
+---
+
+<footer>
+    <div id="footer-company">
+        <CopyrightSVG />
+        <p>V&Bruno 2025</p>
+    </div>
+    <div id="desktop-only-nav">
+        <ul>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/privacy">Privacy policy</a></li>
+        </ul>
+    </div>
+    <div id="footer-socials">
+        <a href="#"><MetaSVG /></a>
+        <a href="https://www.linkedin.com/company/v-and-bruno-llc/" target="_blank" rel="noopener noreferrer"><LinkedinSVG /></a>
+        <a href="https://www.instagram.com/v.and.bruno/" target="_blank" rel="noopener noreferrer"><InstagramSVG /></a>
+    </div>
+</footer>
+
+<style>
+    /*Because we need it to be super responsive, no Tailwind here */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 2.375rem;
+        box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #footer-company {
+        display: flex;
+        align-items: center;
+    }
+
+    #footer-company p {
+        margin-left: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    #footer-socials {
+        display: flex;
+    }
+
+    #footer-socials a {
+        padding: 8px;
+    }
+
+    #footer-socials a:hover {
+        cursor: pointer;
+    }
+
+    #desktop-only-nav {
+        display: none;
+    }
+
+    @media screen and (min-width: 1060px) {
+        footer {
+            align-items: center;
+        }
+        
+        #footer-company p {
+            font-size: 1rem;
+        }
+
+        #desktop-only-nav {
+            display: block;
+        }
+
+        #desktop-only-nav ul {
+            display: flex;
+        }
+
+        #desktop-only-nav ul li {
+            margin-right: 1.25rem;
+        }
+
+        #desktop-only-nav ul li a {
+            font-size: 1rem;
+            padding: 0.5rem;
+        }
+    }
+</style>

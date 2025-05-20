@@ -1,21 +1,21 @@
 ---
 //SSG >> SSR convertor
-//export const prerender = false;
+export const prerender = false;
 
 //non-negotiable
 import "../../styles/global.css"
-/*import LegacyLayout from "src/layouts/LegacyLayout.astro"
+import Layout from "../../layouts/Layout.astro";
+import apiURL from "../../../provider"
 
 //Header and Footer
-import PHeader from "#components/Admin/Partials/Create/PHeader.astro"
-import Footer from "#components/Anon/Footer.astro"
-import apiURL from "provider";
+import PHeader from "../../components/Partials/PHeader.astro";
+import Footer from "../../components/Partials/Footer.astro";
 
 //React-ive profile
-import ProfileParts from "#components/Admin/Sections/Profile/ProfileParts"
+import ProfileParts from "../../components/Partials/ProfileParts"
 
 //Types
-import type { PublicProfileType } from "#components/Admin/Partials/Dashboard/types/profile_type";
+import type { PublicProfileType } from "../../components/Types/profile_type"
 
 //request.params('username')
 const {username} = Astro.params
@@ -44,7 +44,7 @@ try {
 //TODO: Refresh migrations
 //TODO: v2.1.0 >> Refactor to use HTTP cookies vs localStorage
 ---
-<LegacyLayout title={username + "'s Profile"}>
+<Layout title={username + "'s Profile"}>
     <PHeader />
         <main class="bg-gray-100 flex items-center justify-center">
             {
@@ -59,5 +59,4 @@ try {
             }
         </main>
     <Footer />
-</LegacyLayout>
-*/
+</Layout>
