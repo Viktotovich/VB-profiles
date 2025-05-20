@@ -6,7 +6,7 @@ compatibility_flags = [ "nodejs_compat" ]
 
 routes = [
   "https://www.vandbruno.net/profiles/*",
-  "https://www.vandbruno.net/_astro/*",
+  "https://www.vandbruno.net/_astro/_username_*",
 ]
 
 [observability.logs]
