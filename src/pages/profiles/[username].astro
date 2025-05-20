@@ -14,7 +14,7 @@ import PHeader from "../../components/Partials/PHeader.astro";
 import Footer from "../../components/Partials/Footer.astro";
 
 //React-ive profile
-import ProfileParts from "../../components/Partials/ProfileParts"
+import ProfileInfo from "../../components/Partials/ProfileInfo.astro";
 
 //Types
 import type { PublicProfileType } from "../../components/Types/profile_type"
@@ -51,7 +51,7 @@ try {
         <main class="bg-gray-100 flex items-center justify-center">
             {
                 profileInfo ? (
-                    <ProfileParts profileInfo={profileInfo} editable={editable} client:load/>
+                    <ProfileInfo profileInfo={profileInfo} editable={editable} />
                 ) : (
                     <div class="text-center py-20">
                         <h1 class="text-3xl font-bold">User "{username}" not found</h1>
