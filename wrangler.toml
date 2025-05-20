@@ -6,7 +6,7 @@ main = "./dist/_worker.js"
 zone_id = "1a6d5012d3743e1264ca2a9363a0cf3d"
 
 routes = [
-  "https://www.vandbruno.net/profiles/*"
+  "https://www.vandbruno.net/profiles/*",
   "https://www.vandbruno.net/_astro/*"
 ]
 
