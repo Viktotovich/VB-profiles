@@ -9,6 +9,9 @@ routes = [
   "https://www.vandbruno.net/profiles/*"
 ]
 
+[observability.logs]
+enabled = true
+
 [build]
 command = "npm run build"
 
