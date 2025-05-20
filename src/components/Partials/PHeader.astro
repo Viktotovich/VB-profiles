@@ -1,11 +1,10 @@
 ---
-import Image from "astro/components/Image.astro";
-import Logo from "../../../public/alt_logo.png"
+//Astro Image uses sharp, which apparently the CF adapter can't handle
 ---
 
 <nav class="flex justify-between my-[1.5rem] mx-[1rem] md:mx-[2.375rem]">
     <div>
-        <a href="/"><Image alt={"Company Logo"} src={Logo} class="max-h-[50px] w-auto"/></a>
+        <a href="/"><img alt={"Company Logo"} src="/alt-logo.png" class="max-h-[50px] w-auto"/></a>
     </div>
     <ul class="flex items-center">
         <li class="bg-[#4473FF] rounded-md py-[0.75rem] px-[1.5rem] text-white tablet:py-[0.75rem] hover:bg-[#4473ffd1]" >
