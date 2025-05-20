@@ -15,5 +15,8 @@ enabled = true
 [build]
 command = "npm run build"
 
+[site]
+bucket = "./dist"
+
 [triggers]
 crons = []
