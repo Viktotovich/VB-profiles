@@ -29,7 +29,7 @@ let editable: boolean = false
 
 try {
     const res = await fetch(apiURL + "/profile/" + username)
-    if (!res.ok) console.console.warn(res); //not found TODO
+    if (!res.ok) console.warn(res); //not found TODO
 
     const json = (await res.json()) as PublicProfileType
     profileInfo = json.profileData 
