@@ -15,9 +15,6 @@ export default defineConfig({
   //https://github.com/withastro/astro/issues/12824 << bane of my existence
   vite: {
     plugins: [tailwindcss()],
-    ssr: {
-      noExternal: ["react-dom"], // possibly a fix for Cloudflare
-    },
     resolve: {
       alias: {
         "react-dom/server": "react-dom/server.edge",
