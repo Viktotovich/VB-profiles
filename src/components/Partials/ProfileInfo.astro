@@ -2,7 +2,6 @@
 //Refactoring ProfileParts because React Server Components' MessageChannel breaking
 // CF workers
 import roleIdConverter from "../Helpers/roleIdConverter";
-import type { ProfileType } from "../Types/profile_type";
 
 const { profileInfo, editable } = Astro.props;
 const { userData, userProfile } = profileInfo;
@@ -81,6 +80,10 @@ const shareUrl = `https://www.vandbruno.net/profile/${userData.username}`;
               const links = [
                 { name: "LinkedIn", url: userProfile.linkedinUrl },
                 { name: "Instagram", url: userProfile.instagramUrl },
+                {
+                  name: userProfile.calendlyName ?? "Schedule a meeting",
+                  url: userProfile.calendlyUrl,
+                },
                 {
                   name: userProfile.additionalUrlName ?? "Website",
                   url: userProfile.additionalUrl,
